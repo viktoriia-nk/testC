@@ -13,6 +13,7 @@ const Form = ({data}) => {
       ]
 
       const [isModalOpen, setIsModalOpen] = useState(false);
+      const [isModalReset, setIsModalReset] = useState(false)
 
       const handleOpenModal = (e) =>{
         e.preventDefault();
@@ -23,7 +24,10 @@ const Form = ({data}) => {
         setIsModalOpen(false);
       };
 
-      const closeModal = () => setIsModalOpen(false);
+      const closeModal = () => {
+        setIsModalOpen(false)
+        setIsModalReset(false)
+      };
 
       const deleteTopic = (e) => {
         console.log(e.target.parentNode.innerText);
@@ -35,7 +39,7 @@ const Form = ({data}) => {
     // }
 
     const handleReset = () => {
-        setIsModalOpen(true)
+        setIsModalReset(true)
     }
 
 return(
@@ -91,7 +95,7 @@ return(
         ))}
         <div className={s.btnWrap}>
             <button className={s.btnReset} onClick={handleReset} type="button">По умолчанию</button>
-            {isModalOpen &&  
+            {isModalReset &&  
                 <Modal 
                     title={'Вы уверены?'}
                     closeModal={closeModal}
