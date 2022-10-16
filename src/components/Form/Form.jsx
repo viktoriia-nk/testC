@@ -12,15 +12,20 @@ const initState = {
     privateMessagesPeriod: 'instantly',
     newsEmail: false,
     business: true,
+    businessCategories: ['Seo', 'Продвижение', 'Аналитика'],
     oneTwoThree: false,
+    oneTwoThreeCategories: ['Seo', 'Продвижение'],
     seo: false,
+    seoCategories: ['Seo', 'Продвижение', 'Аналитика'],
     bourgeLinks: true,
+    bourgeLinksCategories: ['Биржи ссылок: Не обнаружен'],
     buildHousesMoscow1: true,
     buildHousesMoscow2: false,
     newsTelegram: false,
     buildHousesMoscow1Period: 'instantly',
     buildHousesMoscow2Period: 'instantly',
   };
+ 
 
 const Form = ({data}) => {
 
@@ -58,10 +63,12 @@ const Form = ({data}) => {
         setIsModalReset(false)
       };
 
-      const deleteTopic = (e) => {
-        console.log(e.target.parentNode.innerText);
-        console.log(data);
-    }
+      const deleteTopic = (subj, topic) => {
+        setState(prev => ({
+          ...prev,
+          [subj]: prev[subj].filter(el => el !== topic),
+        }));
+      };
 
     const handleReset = () => {
         setIsModalReset(true)
@@ -73,6 +80,7 @@ const Form = ({data}) => {
         window.scrollTo(0, 0);
         Notiflix.Report.info('😎', 'Данные сброшены. Можете попробовать еще раз :)', 'Ок');
       };
+
 
 return(
      <form className={s.form} onSubmit={onSubmitForm}>
@@ -104,10 +112,20 @@ return(
                                     </span>
                                    <div className={s.wrapper}>
                                         <div className={s.topics}>
-                                            {subOpt.subcategories && subOpt.subcategories.map((topic)=>(
-                                                <div className={s.topicThumb} key={topic}>
-                                                    <p className={s.topicName}>{topic} </p>
-                                                        <button type="button" onClick={deleteTopic} className={s.xBtn}>
+                                        {subOpt.subcategories &&
+                                            state[subOpt.label + 'Categories'].map(topic => (
+                                             <div className={s.topicThumb} key={topic}>
+                                                 <p className={s.topicName}>{topic} </p>
+                                                        <button
+                                                            type="button"
+                                                            onClick={() =>
+                                                            deleteTopic(
+                                                                subOpt.label + 'Categories',
+                                                                topic
+                                                            )
+                                                            }
+                                                            className={s.xBtn}
+                                                        >
                                                             <svg className={s.closeSvg}>
                                                                 <use href={sprite + '#icon-cross'}/>
                                                             </svg>
