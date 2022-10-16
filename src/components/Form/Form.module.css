@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
 }
 
 @media screen and (min-width: 768px) {
@@ -16,6 +16,7 @@
 @media screen and (min-width: 1280px) {
     .form {
         margin-top: 50px;
+        width: 1150px;
     }
 }
 
@@ -37,25 +38,28 @@
     flex-direction: row;
     align-items: center;
     background-color: #EBEBEB;
-    height: 18px;
+    height: 22px;
     border-radius: 10px;
-    padding: 2px 4px;
+    padding-left: 5px;
+    margin-bottom: 10px;
 }
 
 .topicThumb:not(:last-child){
     margin-right: 10px;
+    
 }
 
 @media screen and (min-width: 768px) {
     .topicThumb {
-        height: 20px;
+        height: 24px;
         padding: 3px 6px;
+        margin-bottom: 0;
     }
 }
 
 @media screen and (min-width: 1280px) {
     .topicThumb {
-        height: 25px;
+        height: 26px;
         padding: 3px 8px;
     }
 }
@@ -63,8 +67,9 @@
 .xBtn {
     border-style: none;
     background-color: transparent;
-    color: #707070;
     cursor: pointer;
+    width: 30px;
+    height: 30px;
 }
 
 .topicName {
@@ -184,11 +189,19 @@
 
 .select {
     margin-left: 40px;
+    display: none;
+}
+@media screen  and (min-width: 550px) {
+    .select {
+        margin-left: 40px;
+        display: block;
+    }
 }
 
 @media screen  and (min-width: 768px) {
     .select {
         margin-left: 40px;
+        /* display: block; */
     }
 }
 
@@ -200,7 +213,14 @@
 
 .topicBox {
     width: 150px;
-    margin-right: 200px;
+    /* margin-right: 150px; */
+}
+
+@media screen  and (min-width: 550px) {
+    .topicBox {
+        width: 230px;
+        margin-right: 150px;
+    }
 }
 
 @media screen  and (min-width: 768px) {
@@ -219,8 +239,15 @@
 
 .topics {
     display: flex;
-    
+    flex-direction: column;
 }
+
+@media screen  and (min-width: 768px) {
+    .topics {
+        flex-direction: row;
+    }
+}
+
 
 .moreBtn {
     margin-left: 10px;
@@ -259,6 +286,13 @@
     box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
     position: relative;
     cursor: pointer;
+    margin-left: auto;
+}
+
+@media screen  and (min-width: 550px) {
+    .switch {
+        margin-left: 0;
+    }
 }
 
 .switch:checked {
@@ -353,6 +387,9 @@
 
 .selectPeriod {
     width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: #9a9a9a
 }
 
 @media screen  and (min-width: 768px) {
@@ -368,9 +405,9 @@
 }
 
 .closeSvg {
-    width: 15px;
-    height: 15px;
-    fill: #383838;
+    width: 10px;
+    height: 10px; 
+    fill: #9a9a9a;
     
 }
 
@@ -378,3 +415,102 @@
     display: flex;
     margin-bottom: 20px;
 }
+
+
+
+.titleF {
+    font-family: 'Inter';
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .titleF {
+        font-size: 40px;
+        margin-bottom: 18px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .titleF {
+        font-size: 60px;
+        margin-bottom: 23px;
+    }
+}
+
+.descrF {
+font-family: 'Inter';
+line-height: 1.4;
+font-size: 16px;
+font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+    .descrF {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .descrF {
+        font-size: 22px;
+    }
+}
+
+.thumbF {
+    margin-bottom: 55px;
+}
+
+.infoSvg {
+    fill: #a3a1a1;
+    width: 14px;
+    height: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+
+.spanInfo {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    
+}
+
+.infoModal {
+    display: none;
+    align-items: center;
+    padding-left: 10px;
+    width: 160px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: #383838;
+    position:absolute;
+    top: -23px;
+    left: 210px;
+    z-index: 2;
+}
+
+.infoModal::before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 25px;
+    left: -8px;
+    transform: rotate(45deg);
+    position: absolute;
+    background-color: #383838;
+}
+
+.infoText {
+    font-family: 'Roboto';
+    color: #fff;
+    font-size: 12px;
+}
+
+.infoSvg:hover ~.infoModal{
+    display: flex;
+}
+
