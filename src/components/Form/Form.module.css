@@ -1,0 +1,380 @@
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .form {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .form {
+        margin-top: 50px;
+    }
+}
+
+
+.sub {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.topicThumb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #EBEBEB;
+    height: 18px;
+    border-radius: 10px;
+    padding: 2px 4px;
+}
+
+.topicThumb:not(:last-child){
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .topicThumb {
+        height: 20px;
+        padding: 3px 6px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .topicThumb {
+        height: 25px;
+        padding: 3px 8px;
+    }
+}
+
+.xBtn {
+    border-style: none;
+    background-color: transparent;
+    color: #707070;
+    cursor: pointer;
+}
+
+.topicName {
+    font-family: "Roboto";
+    font-size: 12px;
+    color: #707070;
+}
+
+@media screen and (min-width: 768px) {
+    .topicName {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .topicName {
+        font-size: 16px;
+    }
+}
+
+.title {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    color: #383838;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .title {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+}
+
+.subName {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    color: #383838;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .subName {
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .subName {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+.name {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 14px;
+    color: #383838;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .name {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .name {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+.descr {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 10px;
+    /* width: 400px; */
+    margin-left: 10px;
+    color: #383838;
+    display: none;
+}
+
+@media screen  and (min-width: 768px) {
+    .descr {
+        display: block;
+        margin-left: 40px;
+        width: 200px;
+        font-size: 12px;
+    }
+}
+
+@media screen  and (min-width: 1280px) {
+    .descr {
+        display: block;
+        margin-left: 60px;
+        width: 400px;
+        font-size: 16px;
+    }
+}
+
+.select {
+    margin-left: 40px;
+}
+
+@media screen  and (min-width: 768px) {
+    .select {
+        margin-left: 40px;
+    }
+}
+
+@media screen  and (min-width: 1280px) {
+    .select {
+        margin-left: 60px;
+    }
+}
+
+.topicBox {
+    width: 150px;
+    margin-right: 200px;
+}
+
+@media screen  and (min-width: 768px) {
+    .topicBox {
+        width: 300px;
+        margin-right: 200px;
+    }
+}
+
+@media screen  and (min-width: 1280px) {
+    .topicBox {
+        width: 350px;
+        margin-right: 300px;
+    }
+}
+
+.topics {
+    display: flex;
+    
+}
+
+.moreBtn {
+    margin-left: 10px;
+    border-style: none;
+    background-color: transparent;
+    color: #3861FB;
+    cursor: pointer;
+}
+
+@media screen  and (min-width: 768px) {
+    .moreBtn {
+        margin-left: auto;
+    }
+}
+
+
+@media screen  and (min-width: 1280px) {
+    .moreBtn {
+        margin-left: auto;
+    }
+}
+
+.wrapper {
+    display: flex;
+    width: 430px;
+}
+
+.switch {
+    width: 40px;
+    height: 20px;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: #707070;
+    border-radius: 20px;
+    transition: .5s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+    position: relative;
+    cursor: pointer;
+}
+
+.switch:checked {
+    background-color: #3861FB;
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    top: 2.5px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: .5s;
+    transform: scale(1.1);
+    box-shadow: 0 2px  5px rgba(0, 0, 0, .2);
+}
+
+.switch:checked::before {
+    left: 22px;
+}
+
+
+.btnReset {
+    width: 150px;
+    height: 40px;
+    border-style: none;
+    border-radius: 10px;
+    background-color: #F0F6FF;
+    font-family: "Inter";
+    font-size: 13px;
+    color: #3861FB;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.btnReset:hover {
+    box-shadow: 10px 5px 5px #bacaf7;
+}
+
+@media screen  and (min-width: 768px) {
+    .btnReset {
+        font-size: 14px;
+        width: 180px;
+        height: 40px;
+    }
+}
+
+
+@media screen  and (min-width: 1280px) {
+    .btnReset {
+        font-size: 16px;
+        width: 210px;
+        height: 50px;
+    }
+}
+
+.btnSave {
+    width: 150px;
+    height: 40px;
+    border-style: none;
+    border-radius: 10px;
+    background-color: #3861FB;
+    font-family: "Inter";
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btnSave:hover {
+    box-shadow: 10px 5px 5px #8ca8ef;
+}
+
+@media screen  and (min-width: 768px) {
+    .btnSave {
+        font-size: 14px;
+        width: 180px;
+        height: 40px;
+    }
+}
+
+
+@media screen  and (min-width: 1280px) {
+    .btnSave {
+        font-size: 16px;
+        width: 210px;
+        height: 50px;
+    }
+}
+
+.selectPeriod {
+    width: 80px;
+}
+
+@media screen  and (min-width: 768px) {
+    .selectPeriod {
+        width: 200px;
+    }
+}
+
+@media screen  and (min-width: 1280px) {
+    .selectPeriod {
+        width: 230px;
+    }
+}
+
+.closeSvg {
+    width: 15px;
+    height: 15px;
+    fill: #383838;
+    
+}
+
+.btnWrap {
+    display: flex;
+    margin-bottom: 20px;
+}

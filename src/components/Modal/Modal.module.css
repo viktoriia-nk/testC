@@ -1,0 +1,89 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(182, 177, 177, 0.063);
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 15;
+  }
+  .modal {
+    box-sizing: border-box;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 380px;
+    padding: 50px 57px 60px 58px;
+    background: #ffffff;
+    box-shadow: 10px 10px 30px rgba(193, 199, 221, 0.4);
+    border-radius: 30px;
+  }
+  .btn_close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    /* background-image: url('../../assets/icons/close.svg'); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  
+  .title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #52555f;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .btn_consent {
+    display: flex;
+    justify-content: space-between;
+  }
+  .activ {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.16;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    min-width: 125px;
+    height: 44px;
+    border-radius: 16px;
+    border: none;
+    color: #ffffff;
+    background: #3861FB;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  .btn {
+    background: transparent;
+    min-width: 125px;
+    height: 44px;
+    border: 2px solid #f5f6fb;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #52555f;
+  }
